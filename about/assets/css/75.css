@@ -1,0 +1,79 @@
+main {
+  width: 75em;
+  margin: auto;
+  padding: 1em 0.5em;
+}
+
+.post-preview:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+nav {
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 4em;
+}
+
+header .nav-list {
+  padding: 0;
+}
+
+header .nav-item {
+  display: block;
+  float: left;
+  border: none !important;
+}
+
+header .nav-item a {
+  padding: 0 2em;
+}
+
+header .nav-sub > a {
+  height: calc(4em - 2px);
+}
+
+nav.hidden {
+  display: block;
+}
+
+.nav-sub-item a {
+  text-align: left;
+}
+
+header {
+  max-width: 74em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+}
+
+.top {
+  display: none;
+}
+
+.next, .previous {
+  width: 24.33em;
+}
+
+.next {
+  display: inline-block;
+}
+
+.previous {
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.back {
+  display: none;
+  margin: 0;
+}
+
+.index {
+  margin: 1em 0.5em 0;
+}

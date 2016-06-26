@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me | Brian Brewer</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400,700/Roboto+Mono:400">
+  <link href='//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="../assets/css/default.css" media="screen">
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script src="../assets/js/blog.js"></script>
+</head>
+
+<body>
+  <header>
+    <a class="logo" href="../">Brian Brewer</a>
+    <div class="nav-toggle">
+      <i class="fa fa-ellipsis-v"></i>
+    </div>
+    <nav class="nav-list hidden">
+      <ul>
+        <li class="nav-item"><a href="../">Home</a></li>
+        <li class="nav-item"><a href="../about/">About Me</a></li>
+        <li class="nav-item"><a href="../blog/">Blog</a></li>
+        <li class="nav-item"><a href="../portfolio/">Portfolio</a></li>
+        <li class="nav-item nav-sub">
+          <a href="javascript:;">Accounts <i class="fa fa-caret-down"></i></a>
+          <ul>
+            <li class="nav-sub-item"><a href="https://twitter.com/LT_Zero" target="_blank"><i class="fa fa-twitter fa-fw"></i> Twitter</a></li>
+            <li class="nav-sub-item"><a href="https://reddit.com/u/brianbrewer" target="_blank"><i class="fa fa-reddit-alien fa-fw"></i> Reddit</a></li>
+            <li class="nav-sub-item"><a href="https://github.com/brianbrewer" target="_blank"><i class="fa fa-github fa-fw"></i> Github</a></li>
+            <li class="nav-sub-item"><a href="https://bitbucket.org/brianbrewer" target="_blank"><i class="fa fa-bitbucket fa-fw"></i> BitBucket</a></li>
+            <li class="nav-sub-item"><a href="https://www.youtube.com/channel/UCwxYE22tSoGAgxoN6ESKCvw" target="_blank"><i class="fa fa-youtube fa-fw"></i> Youtube</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="heading">About Me</div>
+    <div class="markdown">
+      <h1 id="example">Example</h1>
+<h2 id="example-2">Example 2</h2>
+<h3 id="example-3">Example 3</h3>
+<h4 id="example-4">Example 4</h4>
+<h5 id="example-5">Example 5</h5>
+<h6 id="example-6">Example 6</h6>
+<p><em>Example</em>
+<strong>Example</strong>
+<del>Example</del></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Help</td>
+<td>Display the help window</td>
+</tr>
+<tr>
+<td>Close</td>
+<td>Closes a window</td>
+</tr>
+<tr>
+<td>Something</td>
+<td>Does something else</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-javascript">    var EasingFunction = {
+        linear: function (t) {
+            return t;
+        },
+        easeInQuad: function (t) {
+            return t * t;
+        },
+        easeOutQuad: function (t) {
+            return t * (2 - t);
+        },
+        easeInOutQuad: function (t) {
+            return t &lt; 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        },
+        easeInCubic: function (t) {
+            return t * t * t;
+        },
+        easeOutCubic: function (t) {
+            return (--t) * t * t + 1;
+        },
+        easeInOutCubic: function (t) {
+            return t &lt; 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        },
+        easeInQuart: function (t) {
+            return t * t * t * t;
+        },
+        easeOutQuart: function (t) {
+            return 1 - (--t) * t * t * t;
+        },
+        easeInOutQuart: function (t) {
+            return t &lt; 0.5 ? 8 * t * t * t * t : 1 - 8 * (--t) * t * t * t;
+        },
+        easeInQuint: function (t) {
+            return t * t * t * t * t;
+        },
+        easeOutQuint: function (t) {
+            return 1 + (--t) * t * t * t * t;
+        },
+        easeInOutQuint: function (t) {
+            return t &lt; 0.5 ? 16 * t * t * t * t * t : 1 + 16 * (--t) * t * t * t * t;
+        }
+    };
+</code></pre>
+<pre><code class="lang-html">    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Example Title&lt;/title&gt;
+        &lt;/head&gt;
+    &lt;/html&gt;
+</code></pre>
+<blockquote>
+<p>Here is some sort of
+block quote that spans over</p>
+<p>more than one paragraph
+how this will look is anybodys guess</p>
+<p>I suppose at some point i&#39;ll get around to fixing all of this</p>
+</blockquote>
+<pre><code class="lang-markdown">    ## Example markdown
+</code></pre>
+<p>I&#39;ve also encountered this same problem, as you said it is because metalsmith-templates is a dependency of metalsmith-tags. This plugin uses the metadata <code>template</code> whereas metalsmith-layouts requires the use of <code>layout</code> instead to provide the template/layout for the file. Below are a couple of solutions that I hope will help</p>
+<h5 id="1-editing-metalsmith-tags-locally">1: Editing metalsmith-tags locally</h5>
+<p>Changing its reference at <a href="https://github.com/totocaster/metalsmith-tags/blob/master/lib/index.js#L138">L138</a> from <code>template</code> to <code>layout</code> has made it work perfectly fine.</p>
+<pre><code class="lang-javascript">    // Generate a new file based on the filename with correct metadata.
+    var page = {
+      layout: opts.template,
+      contents: &#39;&#39;,
+      tag: tag,
+      pagination: {
+        num: i + 1,
+        pages: pages,
+        tag: tag,
+        files: pageFiles
+      }
+    };
+</code></pre>
+<h5 id="2-writing-a-plugin-to-create-a-layout-property-using-the-template-property-">2: Writing a plugin to create a <code>layout</code> property using the <code>template</code> property.</h5>
+<p>This solution requires no messing with the plugin internals and only add a new layout field if there is not one already and a template field available.</p>
+<pre><code class="lang-javascript">    .use(function (files, metalsmith, done) {
+        Object.keys(files).forEach(function (file) {
+            var data = files[file];
+
+            // Only messes with metadata if there is no layout and a template
+            if (!data.layout &amp;&amp; data.template) {
+                data.layout = data.template;
+            }
+        });
+        done();
+    })
+</code></pre>
+<h5 id="3-updating-metalsmith-tags">3: Updating metalsmith-tags</h5>
+<p>At the same time I also forked the plugin and made the changes to make it so that metalsmith-layouts is used instead of metalsmith-templates <a href="https://github.com/brianbrewer/metalsmith-tags">brianbrewer/metalsmith-tags</a></p>
+<blockquote>
+<p>Example of some sort of inner quote</p>
+<blockquote>
+<p>Here?</p>
+</blockquote>
+</blockquote>
+<p></div>
+</div></p>
+<p><div class="card post"></p>
+<div class="container">
+
+<p>Using some very dank web html scripting pasting, i&#39;ve managed to get from one page to another card. It&#39;s amazing the power of text onto a page using some sort of tempalting engine and a text editing language <em>cough</em> Metalsmith, Handlebars, Markdown <em>cough</em> Actually it&#39;s easier just to write it below:</p>
+<pre><code class="lang-html">    &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card post&quot;&gt;
+    &lt;div class=&quot;container&quot;&gt;
+</code></pre>
+
+    </div>
+    <a href="#" class="top">Top</a>
+    <footer>
+      <ul>
+        <li>Created by <a href="http://brianbrewer.co.uk">Brian Brewer</a></li>
+        <li>Created using <a href="http://metalsmith.io">Metalsmith</a></li>
+        <li>Copyright 2016</li>
+        <li><a href="../sitemap.xml">Sitemap</a></li>
+      </ul>
+    </footer>
+  </main>
+</body>
+
+</html>
