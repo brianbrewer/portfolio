@@ -3,11 +3,11 @@
 <url> <loc>http://localhost:8080/index.html</loc> </url>
 <url> <loc>http://localhost:8080/about\index.html</loc> </url>
 <url> <loc>http://localhost:8080/portfolio\index.html</loc> </url>
-<url> <loc>http://localhost:8080/work\portfolio_item_one\index.html</loc> </url>
 <url> <loc>http://localhost:8080/work\portfolio_item_three\index.html</loc> </url>
+<url> <loc>http://localhost:8080/work\portfolio_item_one\index.html</loc> </url>
 <url> <loc>http://localhost:8080/work\portfolio_item_two\index.html</loc> </url>
-<url> <loc>http://localhost:8080/post\2016\06\21\example-post-two\index.html</loc> </url>
 <url> <loc>http://localhost:8080/post\2016\06\21\example-post-one\index.html</loc> </url>
+<url> <loc>http://localhost:8080/post\2016\06\21\example-post-two\index.html</loc> </url>
 <url> <loc>http://localhost:8080/tags\blog\index.html</loc> </url>
 <url> <loc>http://localhost:8080/tags\example\index.html</loc> </url>
 <url> <loc>http://localhost:8080/tags\winner\index.html</loc> </url>
