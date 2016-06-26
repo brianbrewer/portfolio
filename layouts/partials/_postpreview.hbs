@@ -1,0 +1,29 @@
+<section class="post-preview">
+  <a href="{{rootPath}}{{path}}">
+    <picture>
+      <source media="(min-width: 75em)" srcset="http://placehold.it/1920x1080/00f/fff?text=Designing+This+Website">
+      <source media="(min-width: 720px)" srcset="http://placehold.it/1280x720/0f0/fff?text=Designing+This+Website">
+      <img src="http://placehold.it/960x540/f00/fff?text=Designing+This+Website" alt="Designing This Website" class="image">
+    </picture>
+  </a>
+  <div class="details">
+    <a href="{{rootPath}}{{path}}"><h1 class="title">{{title}}</h1></a>
+    <div class="date">
+      <i class="fa fa-clock-o fa-fw"></i>
+      <span>{{date}}</span>
+    </div>
+    <div class="readtime">
+      <i class="fa fa-eye fa-fw"></i>
+      <span>5 min</span>
+    </div>
+    <ul class="tags">
+      <i class="fa fa-hashtag fa-fw"></i>
+      {{#each tags}}
+        <li class="tag"><a href="{{rootPath}}/tags/{{lookup ../tagsUrlSafe @index}}">{{this}}</a></li>
+      {{/each}}
+    </ul>
+    <div class="snippet markdown">
+      {{{snippet}}}
+    </div>
+  </div>
+</section>

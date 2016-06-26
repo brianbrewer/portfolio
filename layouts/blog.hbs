@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> _head}}
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="{{rootPath}}assets/js/header.js"></script>
+  <script src="{{rootPath}}assets/js/blog.js"></script>
+</head>
+
+<body>
+  {{> _header}}
+  <main>
+    {{#if tag}}
+      <div class="heading">Blog Posts tagged '{{tag}}'</div>
+    {{^}}
+      <div class="heading">Blog Posts</div>
+    {{/if}}
+    {{#each pagination.files}}
+      {{> _postpreview}}
+    {{/each}}
+    <!-- <a href="#next" class="archive">Archive</a> -->
+    <a href="{{rootPath}}{{pagination.previous.path}}" class="previous{{#unless pagination.previous}} disabled{{/unless}}">Newer</a>
+    <a href="{{rootPath}}{{pagination.next.path}}" class="next{{#unless pagination.next}} disabled{{/unless}}">Older</a>
+    <a href="#" class="top">Top</a>
+    {{> _footer}}
+  </main>
+</body>
+
+</html>

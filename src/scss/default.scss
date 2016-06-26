@@ -1,0 +1,15 @@
+$desktop-width: 75em;
+
+@mixin desktop {
+   @media screen and (min-width: #{$desktop-width}){
+    @content;
+  }
+}
+
+// Main imports
+@import "./partials/_reset.scss";
+@import "./partials/_main.scss";
+@import "./partials/_markdown.scss";
+@import "./partials/_blog.scss";
+@import "./partials/_portfolio.scss";
+@import "./partials/_post.scss";

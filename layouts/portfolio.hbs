@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> _head}}
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="{{rootPath}}assets/js/header.js"></script>
+  <script src="{{rootPath}}assets/js/blog.js"></script>
+  <script src="{{rootPath}}assets/js/portfolio.js"></script>
+</head>
+
+<body>
+  {{> _header}}
+  <main>
+    <div class="filter">
+      <i class="filter-item devicons devicons-html5" data-toggle="html5"></i>
+      <i class="filter-item devicons devicons-css3" data-toggle="css3"></i>
+      <i class="filter-item devicons devicons-javascript" data-toggle="javascript"></i>
+      <i class="filter-item devicons devicons-sass" data-toggle="sass"></i>
+      <i class="filter-item devicons devicons-coffeescript" data-toggle="coffeescript"></i>
+      <i class="filter-item devicons devicons-less" data-toggle="less"></i>
+      <i class="filter-item devicons devicons-android" data-toggle="android"></i>
+      <i class="filter-item devicons devicons-apple" data-toggle="apple"></i>
+      <i class="filter-item devicons devicons-nodejs_small" data-toggle="nodejs"></i>
+      <i class="filter-item devicons devicons-java" data-toggle="java"></i>
+      <i class="filter-item devicons devicons-rust" data-toggle="rust"></i>
+    </div>
+    <div class="flex-container">
+      {{#each collections.work}}
+        {{> _workpreview}}
+      {{/each}}
+    </div>
+    {{> _footer}}
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+<div class="flex-item {{#each type}}item-{{this}}{{#unless @last}} {{/unless}}{{/each}}">
+  <a href="{{rootPath}}{{path}}"><img class="image" src="http://lorempixel.com/256/512/abstract?One" alt="Item"></a>
+  <div class="icons">
+    {{#each type}}
+      <i class="devicons devicons-{{this}}"></i>
+    {{/each}}
+  </div>
+  <div class="info">{{title}}</div>
+</div>

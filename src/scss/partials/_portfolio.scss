@@ -1,0 +1,107 @@
+.filter {
+  position: relative;
+  min-height: 2em;
+  width: 100%;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  font-size: 2em;
+  text-align: center;
+}
+
+.filter-item {
+  cursor: pointer;
+}
+
+.filter-item.toggled {
+  color: #ff8c00;
+}
+
+.filtering .flex-item {
+  display: none;
+}
+
+.filter-android .item-android,
+.filter-apple .item-apple,
+.filter-coffeescript .item-coffeescript,
+.filter-css3 .item-css3,
+.filter-html5 .item-html5,
+.filter-java .item-java,
+.filter-javascript .item-javascript,
+.filter-less .item-less,
+.filter-nodejs .item-nodejs,
+.filter-rust .item-rust,
+.filter-sass .item-sass {
+  display: block !important;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: stretch;
+  @include desktop {
+    justify-content: space-between;
+  }
+
+  & ~ footer {
+    margin-top: 0;
+  }
+
+  .flex-item {
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    width: 256px;
+    height: 512px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+    .icons {
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      padding: 0.5em;
+      pointer-events: none;
+      font-size: 1.2em;
+      color: #fff;
+      width: 100%;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    }
+
+    .image {
+      transition: transform 200ms ease-in-out 0;
+      transform: translate(0, -128px);
+      @include desktop {
+        transform: translate(0, 0);
+      }
+    }
+
+    .info {
+      position: absolute;
+      background-color: #fff;
+      height: 128px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border-top: 1px solid #d9d9d9;
+      transition: bottom 200ms ease-in-out 0;
+      padding: 1em;
+      @include desktop {
+        bottom: -128px;
+      }
+    }
+
+    &:hover {
+      .info {
+        bottom: 0;
+      }
+
+      .image {
+        transform: translate(0, -128px);
+      }
+    }
+  }
+}

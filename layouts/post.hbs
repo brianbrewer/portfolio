@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> _head}}
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="{{title}}" />
+  <meta property="og:image" content="{{image_url}}" />
+  <meta property="og:description" content="{{description}}" />
+  <meta property="og:site_name" content="{{site.name}}" />
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.5/clipboard.min.js"></script>
+  <script src="{{rootPath}}assets/js/header.js"></script>
+  <script src="{{rootPath}}assets/js/post.js"></script>
+</head>
+
+<body>
+  {{> _header}}
+  <main>
+    <a href="javascript:window.history.back();" class="back">Back</a>
+    <article class="post">
+      <div class="title">{{title}}</div>
+      <img class="image" src="http://placehold.it/1920x1080.png" alt="">
+      <div class="content markdown">
+        {{{contents}}}
+      </div>
+      <ul class="tags">
+        {{#each tags}}
+          <li class="tag"><a href="{{rootPath}}/tags/{{lookup ../tagsUrlSafe @index}}">{{this}}</a></li>
+        {{/each}}
+      </ul>
+      <div class="share">
+        <ul>
+          <li class="share-item"><a href="mailto:?Subject={{url_encoded_subject}}&amp;body={{url_encoded_message}}"><i class="fa fa-envelope-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.linkedin.com/shareArticle?title={{title}}&amp;url={{page_url}}"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.facebook.com/sharer/sharer.php?u={{page_url}}"><i class="fa fa-facebook-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://twitter.com/intent/tweet?text={{title}}&amp;via={{twitter_username}}&amp;url={{page_url}}" target="_blank"><i class="fa fa-twitter-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="https://plus.google.com/share?url={{page_url}}"><i class="fa fa-google-plus-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://reddit.com/submit?title={{title}}&amp;url={{page_url}}"><i class="fa fa-reddit-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.tumblr.com/share/link?url={{url_encoded_url}}&amp;name={{url_encoded_post_title}}&amp;description={{url_encoded_post_text}}"><i class="fa fa-tumblr-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.pinterest.com/pin/create/button/?url={{url_encoded_url}}&amp;media={{url_encoded_image_url}}&amp;description={{url_encoded_description}}"><i class="fa fa-pinterest-square fa-fw"></i></a></li>
+          <li class="share-item share-clipboard" data-clipboard-text="http://brianbrewer.co.uk/post/post-title-name"><a href="javascript:;"><i class="fa fa-share-square fa-fw"></i></a></li>
+        </ul>
+      </div>
+    </article>
+    <a href="#previous" class="previous">Previous Post</a>
+    <a href="#next" class="next disabled">Next Post</a>
+    <a href="#" class="top">Top</a>
+    {{> _footer}}
+  </main>
+</body>
+
+</html>

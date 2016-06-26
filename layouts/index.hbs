@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> _head}}
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="{{rootPath}}assets/js/header.js"></script>
+  <script src="{{rootPath}}assets/js/blog.js"></script>
+</head>
+
+<body>
+  {{> _header}}
+  <main>
+    <section class="welcome">
+      <picture>
+        <source media="(min-width: 75em)" srcset="http://placehold.it/1920x1080/00f/fff?text=My+Face">
+        <source media="(min-width: 720px)" srcset="http://placehold.it/1280x720/0f0/fff?text=My+Face">
+        <img src="http://placehold.it/960x540/f00/fff?text=My+Face" alt="">
+      </picture>
+      <div class="details markdown">
+        <p>Greetings!</p>
+        <p>That there is my face. My name is Brian Brewer, I am a graduate from University of Portsmouth with a 2:1 in Computer Science. I had previously attended Chichester College, attaining a Merit in HND Computing and Systems Development</p>
+        <p>My aim is to do the stuff with the things and further my stuff making things, hopefully creating a stuff so that things can do stuff</p>
+        <p>Please look around at the portfolio section for some examples of my completed and in progress work</p>
+        <p>I make stuff.</p>
+      </div>
+    </section>
+    <div class="heading">Latest</div>
+    {{#each collections.post}}
+      {{> _postpreview}}
+    {{/each}}
+    <a href="{{rootPath}}blog/" class="more">More</a>
+    <a href="#" class="top">Top</a>
+    {{> _footer}}
+  </main>
+</body>
+
+</html>
