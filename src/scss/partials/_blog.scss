@@ -92,6 +92,11 @@ main {
     line-height: 2.67em;
     display: block;
     font-size: 1.5em;
+    margin-bottom: 0.33em;
+
+    @include desktop {
+      margin-bottom: 0;
+    }
 
     &:hover {
       background-color: #f9f9f9;
@@ -107,8 +112,6 @@ main {
   }
 
   .top {
-    margin-bottom: 0.33em;
-
     @include desktop {
       display: none;
     }

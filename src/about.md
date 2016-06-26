@@ -1,6 +1,6 @@
 ---
-title: About
-layout: page.hbs
+title: About Me
+layout: about.hbs
 ---
 
 # Example

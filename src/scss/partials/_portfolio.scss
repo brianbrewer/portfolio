@@ -41,6 +41,7 @@
   flex-flow: row wrap;
   justify-content: space-around;
   align-content: stretch;
+  min-height: 512px;
   @include desktop {
     justify-content: space-between;
   }
@@ -72,7 +73,7 @@
     }
 
     .image {
-      transition: transform 200ms ease-in-out 0;
+      transition: transform 200ms ease-out;
       transform: translate(0, -128px);
       @include desktop {
         transform: translate(0, 0);
@@ -87,7 +88,7 @@
       bottom: 0;
       left: 0;
       border-top: 1px solid #d9d9d9;
-      transition: bottom 200ms ease-in-out 0;
+      transition: bottom 200ms ease-in-out;
       padding: 1em;
       @include desktop {
         bottom: -128px;

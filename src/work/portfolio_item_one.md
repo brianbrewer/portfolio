@@ -4,7 +4,7 @@ type:
   - html5
   - css3
   - javascript
-layout: page.hbs
+layout: work.hbs
 ---
 
 # Hey there :D

@@ -2,7 +2,7 @@
 title: Portfolio Item Two
 type:
   - rust
-layout: page.hbs
+layout: work.hbs
 ---
 
 # Gameboy Emulator

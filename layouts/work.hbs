@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {{> _head}}
+
+  <!-- SPACE -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min.js"></script>
+  <script src="{{rootPath}}assets/js/header.js"></script>
+  <script src="{{rootPath}}assets/js/blog.js"></script>
+</head>
+
+<body>
+  {{> _header}}
+  <main>
+    <div class="heading">{{title}}</div>
+    <div class="markdown">
+      {{{contents}}}
+    </div>
+    <a href="#" class="top">Top</a>
+    {{> _footer}}
+  </main>
+</body>
+
+</html>

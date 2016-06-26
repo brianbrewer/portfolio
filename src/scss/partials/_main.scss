@@ -165,6 +165,10 @@ main {
     border: 1px solid #d33682;
     color: #93a1a1;
 
+    @include desktop {
+      margin-bottom: 1em;
+    }
+
     img {
       width: 100%;
     }
@@ -189,6 +193,10 @@ main {
     font-size: 2em;
     line-height: 2em;
     text-align: center;
+
+    @include desktop {
+      margin-bottom: 0.5em;
+    }
   }
 
   footer {
