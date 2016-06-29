@@ -19,7 +19,7 @@
       <div class="heading">Blog Posts</div>
     {{/if}}
     {{#each pagination.files}}
-      {{> _postpreview}}
+      {{> _postpreview superPath=../rootPath}}
     {{/each}}
     <!-- <a href="#next" class="archive">Archive</a> -->
     <a href="{{rootPath}}{{pagination.previous.path}}" class="previous{{#unless pagination.previous}} disabled{{/unless}}">Newer</a>

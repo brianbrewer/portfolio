@@ -34,19 +34,19 @@
       <div class="share">
         <ul>
           <li class="share-item"><a href="mailto:?Subject={{url_encoded_subject}}&amp;body={{url_encoded_message}}"><i class="fa fa-envelope-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="http://www.linkedin.com/shareArticle?title={{title}}&amp;url={{page_url}}"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="http://www.facebook.com/sharer/sharer.php?u={{page_url}}"><i class="fa fa-facebook-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="http://twitter.com/intent/tweet?text={{title}}&amp;via={{twitter_username}}&amp;url={{page_url}}" target="_blank"><i class="fa fa-twitter-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="https://plus.google.com/share?url={{page_url}}"><i class="fa fa-google-plus-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="http://reddit.com/submit?title={{title}}&amp;url={{page_url}}"><i class="fa fa-reddit-square fa-fw"></i></a></li>
-          <li class="share-item"><a href="http://www.tumblr.com/share/link?url={{url_encoded_url}}&amp;name={{url_encoded_post_title}}&amp;description={{url_encoded_post_text}}"><i class="fa fa-tumblr-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.linkedin.com/shareArticle?title={{encode title}}&amp;url={{encode site.url}}/{{encode path}}"><i class="fa fa-linkedin-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.facebook.com/sharer/sharer.php?u={{encode site.url}}/{{encode path}}"><i class="fa fa-facebook-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://twitter.com/intent/tweet?text={{encode title}}&amp;via={{encode site.twitter}}&amp;url={{encode site.url}}/{{encode path}}" target="_blank"><i class="fa fa-twitter-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="https://plus.google.com/share?url={{encode site.url}}/{{encode path}}"><i class="fa fa-google-plus-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://reddit.com/submit?title={{encode title}}&amp;url={{encode site.url}}/{{encode path}}"><i class="fa fa-reddit-square fa-fw"></i></a></li>
+          <li class="share-item"><a href="http://www.tumblr.com/share/link?url={{encode site.url}}/{{encode path}}&amp;name={{encode title}}&amp;description={{encode contents}}"><i class="fa fa-tumblr-square fa-fw"></i></a></li>
           <li class="share-item"><a href="http://www.pinterest.com/pin/create/button/?url={{url_encoded_url}}&amp;media={{url_encoded_image_url}}&amp;description={{url_encoded_description}}"><i class="fa fa-pinterest-square fa-fw"></i></a></li>
-          <li class="share-item share-clipboard" data-clipboard-text="http://brianbrewer.co.uk/post/post-title-name"><a href="javascript:;"><i class="fa fa-share-square fa-fw"></i></a></li>
+          <li class="share-item share-clipboard" data-clipboard-text="{{site.url}}/{{path}}"><a href="javascript:;"><i class="fa fa-share-square fa-fw"></i></a></li>
         </ul>
       </div>
     </article>
-    <a href="#previous" class="previous">Previous Post</a>
-    <a href="#next" class="next disabled">Next Post</a>
+    <a href="{{rootPath}}{{previous.path}}" class="previous{{#unless previous}} disabled{{/unless}}">{{#if previous}}{{previous.title}}{{^}}Newer Post{{/if}}</a>
+    <a href="{{rootPath}}{{next.path}}" class="next{{#unless next}} disabled{{/unless}}">{{#if next}}{{next.title}}{{^}}Older Post{{/if}}</a>
     <a href="#" class="top">Top</a>
     {{> _footer}}
   </main>

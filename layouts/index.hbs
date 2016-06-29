@@ -29,7 +29,7 @@
     </section>
     <div class="heading">Latest</div>
     {{#each collections.post}}
-      {{> _postpreview}}
+      {{> _postpreview superPath=../rootPath}}
     {{/each}}
     <a href="{{rootPath}}blog/" class="more">More</a>
     <a href="#" class="top">Top</a>

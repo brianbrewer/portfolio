@@ -1,65 +1,69 @@
 .post {
   width: 100%;
   margin-bottom: 0.5em;
-}
 
-.post .title {
-  font-size: 2em;
-  line-height: 1em;
-  padding: 0.5em;
-  background-color: #fff;
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-  border-top: 1px solid #d9d9d9;
-}
+  @include desktop {
+    margin-bottom: 1em;
+  }
 
-.post .image {
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-  max-width: 100%;
-  display: block;
-}
+  .title {
+    font-size: 2em;
+    line-height: 1em;
+    padding: 0.5em;
+    background-color: #fff;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-top: 1px solid #d9d9d9;
+  }
 
-.post .content {
-  padding: 1em;
-  background-color: #fff;
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-}
+  .image {
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    max-width: 100%;
+    display: block;
+  }
 
-.post .tags {
-  background-color: #fff;
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-  padding: 0.5em;
-  font-size: 0.8em;
-}
+  .content {
+    padding: 1em;
+    background-color: #fff;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+  }
 
-.post .tag {
-  color: #555;
-  display: inline-block;
-  margin: 0.2em;
-  padding: 0.1em;
-}
+  .tags {
+    background-color: #fff;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    padding: 0.5em;
+    font-size: 0.8em;
 
-.post .tag:not(:last-child)::after {
-  content: ",";
-}
+    .tag {
+      color: #555;
+      display: inline-block;
+      margin: 0.2em;
+      padding: 0.1em;
 
-.post .share {
-  text-align: center;
-  padding-top: 2.5em;
-  min-height: 5em;
-  color: #aaa;
-  background-color: #fff;
-  border-left: 1px solid #d9d9d9;
-  border-right: 1px solid #d9d9d9;
-  border-bottom: 1px solid #d9d9d9;
-}
+      &:not(:last-child)::after {
+        content: ",";
+      }
+    }
+  }
 
-.post .share-item {
-  display: inline-block;
-  font-size: 2em;
+  .share {
+    text-align: center;
+    padding-top: 2.5em;
+    min-height: 5em;
+    color: #aaa;
+    background-color: #fff;
+    border-left: 1px solid #d9d9d9;
+    border-right: 1px solid #d9d9d9;
+    border-bottom: 1px solid #d9d9d9;
+
+    .share-item {
+      display: inline-block;
+      font-size: 2em;
+    }
+  }
 }
 
 .archive,

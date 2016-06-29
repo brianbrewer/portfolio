@@ -30,14 +30,16 @@ Handlebars.registerHelper('encode', function (string) {
 })
 
 var _sitename = 'Brian Brewer'
-var _url = 'http://localhost:8080'
+var _url = 'http://brianbrewer.github.io/portfolio'
+var _twitter = 'LT_Zero'
 
 // Build site
 Metalsmith(__dirname)
   .use(define({
     site: {
       name: _sitename,
-      url: _url
+      url: _url,
+      twitter: _twitter
     }
   }))
   .use(markdown())
@@ -57,7 +59,7 @@ Metalsmith(__dirname)
     },
     work: {
       sortBy: 'date',
-      reverse: true,
+      reverse: false,
       pattern: 'work/*.html'
     }
   }))
@@ -89,12 +91,12 @@ Metalsmith(__dirname)
     pattern: ':collection/:date/:title',
     relative: true
   }))
-  .use(rootPath())
   .use(snippet({
     maxLength: 500,
     suffix: '...'
   }))
   .use(wordcount())
+  .use(rootPath())
   .use(layouts({
     engine: 'handlebars',
     directory: './layouts',
@@ -105,6 +107,7 @@ Metalsmith(__dirname)
     hostname: _url
   }))
   .destination('./build')
+  .clean(false)
   .build(function (err) {
     if (err) {
       console.log('Error:', err)

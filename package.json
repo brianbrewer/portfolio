@@ -22,6 +22,11 @@
     "moment": "^2.11.1"
   },
   "scripts": {
-    "start": "node build"
+    "clean": "rm -rf build/*",
+    "build": "node build && npm run post-build",
+    "post-build": "rm -rf build/posts && rm -rf build/*/assets && rm -rf build/*/posts",
+    "release": "npm run clean && npm run build",
+    "host": "npm run clean && npm run build && http-server build -c-1",
+    "deploy": "cd build && git add --all && git commit -m \"Release\" && git push"
   }
 }
